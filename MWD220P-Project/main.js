@@ -30,8 +30,8 @@ d3.dsv(',','AMZN.csv',function(d){
 
     svg.append("path")
         .datum(data)
-        .attr("fill", "none")
-        .attr("stroke", "blue")
+        .attr("fill", "gray")
+        .attr("stroke", "teal")
         .attr("stroke-width", 2)
         .attr("d", valueline);
 
@@ -42,7 +42,7 @@ d3.dsv(',','AMZN.csv',function(d){
         .call(yAxis);
 
     var xAxis = d3.axisBottom(xscale)
-        .tickFormat(d3.timeFormat("%Y-%m"));
+        .tickFormat(d3.timeFormat("%Y-%m-%d"));
     svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
